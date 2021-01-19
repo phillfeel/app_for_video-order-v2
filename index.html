@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 , maximum-scale=1, user-scalable=0">
+  <title>Форма заказа видео</title>
+  <link rel="shortcut icon" href="img/favicon-new.png" type="image/png">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+  <script src="js\modernizr-custom.js"></script>
+  <script src="script/fontawesome.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+  <nav class="navbar navbar-expand-lg navbar-dark ">
+    <div class="container header__inner">
+
+    <a class="navbar-brand" href="#"><img src="img/s2b_logo-ok.png" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" ">
+      <ul class=" nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link first nav__link" href="#" title="">
+              <span>Главная</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link first nav__link" href="#" title="">
+              <span>Примеры видео</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav__link is-current active" href="#" title="">
+              <span>Заказать видеоролик</span>
+            </a>
+          </li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+  <div class="container">
+    <div class="row main">
+      <div class="col-md-10 left-main">
+        <form id="formElem" method="post" enctype="multipart/form-data">
+          <div class="wrapper">
+            <div class="main-settings block">
+              <div class="duration-main">
+                <h5 class="duration-main__title">Длина видеоролика в секундах</h5>
+                <div class="counter qty main-counter form-group">
+                  <span class="minus"><i class="fas fa-minus-circle"></i></span>
+                  <input id="main-conter-val" type="number" class="count" name="main-duration" value="10">
+                  <span class="plus"><i class="fas fa-plus-circle"></i></span>
+                </div>
+              </div>
+              <div class="video-name">
+                <h5>Название для видео</h5>
+                <input class="text-field form-control" type="text" name="video-name" placeholder="Введите текст">
+              </div>
+              <div class="format-video">
+                <h5 class="format-video__title">Формат</h5>
+                <div class="format-video__change">
+                  <select value="" name="main-format" class="format-video__change_input form-control form-control-sm ">
+                    <option>16:9</option>
+                    <option>9:16</option>
+                    <option>1:1</option>
+                    <option>Ввести</option>
+                  </select>
+                </div>
+                <div class="format-video__preview">
+                </div>
+
+              </div>
+              
+              <!-- <div class="disclaimer-block mini-block">
+                <h6>Введите дисклеймер</h6>
+                <textarea name="main-disclaimer" class="form-control" id="textarea2" placeholder="Дисклэймер"
+                  rows="2"></textarea>
+                <div class="form-check disclaimer-block__radio form-check-inline">
+                  <input class="form-check-input" type="radio" name="disclaimer-where" id="inlineRadio1" value="all">
+                  <label class="form-check-label" for="inlineRadio1">Дисклеймер на каждом слайде</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input checked class="form-check-input" type="radio" name="disclaimer-where" id="inlineRadio2"
+                    value="option">
+                  <label class="form-check-label" for="inlineRadio2">Настроить отдельно для каждого слайда</label>
+                </div>
+              </div> -->
+            </div>
+          </div>
+          <div class="video-slide block">
+            <div class="wrapper">
+              <div class="title-line">
+                <div class="left-title">
+                  <h5 class="video-slide__number">1</h5>
+                  <select name="slide-1" class="video-slide__change form-control form-control-sm">
+                    <option selected value="stimul">Побуждающая фраза</option>
+                    <option value="logo">Интро (вступление)</option>
+                    <option value="product">Товар-Цена</option>
+                    <option value="service">Услуга-Описание</option>
+                    <option value="stock">Акция</option>
+                    <option value="contact">Контакты</option>
+                  </select>
+                </div>
+                <div class="right-title">
+                  <h6 class="duration-title">Длительность</h6>
+                  <div class="counter qty slide-counter">
+                    <span class="minus"><i class="fas fa-minus-circle"></i></span>
+                    <input type="number" class="count stimul-phrase-count-1" name="stimul-phrase-count-1" value="5">
+                    <span class="plus"><i class="fas fa-plus-circle"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="add-item-block add-slide">
+            <button type="button" class="add-item">
+              <i class="fas fa-plus-circle"></i>
+              <p>Добавить кадр</p>
+            </button>
+          </div>
+
+          <div class="last-main-block">
+            <!-- <div class="attach-block for-logo">
+              <label class="my-file-input" for="main-logo">
+                <ion-icon size="large" name="attach-outline"></ion-icon>
+                <h5>Прикрепить логотип</h5>
+              </label>
+              <input name="main-logo" type="file" accept="image/*" class="form-control-file" id="main-logo">
+            </div> -->
+          <!--   <div class="colors-block mini-block">
+              <h6>Напишите цвета для видеоролика</h6>
+              <input class="main-colors form-control" name="main-colors" type="text" placeholder="Основные цвета">
+              <div class="more-colors optional-field form-check">
+                <input class="form-check-input optional-checkbox" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                  <input name="main-extra-color" class="optional-txt form-control form-control-sm" type="text"
+                    placeholder="Дополнительные цвета">
+                </label>
+              </div>
+            </div> -->
+            <div class="attach-block extra">
+              <label class="my-file-input" for="extra-files">
+                <!-- <ion-icon size="large" name="attach-outline"></ion-icon> -->
+                <p><i class="fas fa-paperclip"></i> Прикрепите медиафайлы</p>
+              </label>
+              <input type="file" name="extra-files[]" multiple accept="image/*" class="form-control-file"
+                id="extra-files">
+              <p class="description">фото, логотип, брендбук и т.д.</p>
+            </div>
+            <div class="form-group links-block mini-block">
+              <p>Если вы хотите прикрепить файлы большого размера (больше 20 MB) загрузите их на файлообменник и прикрепите ссылку. Рекомендуем сервис без регистрации - <a target="_blank" href="https://dropmefiles.com/">dropmefiles</a>.</p>
+              <textarea name="main-files-links" class="form-control" id="textarea1" placeholder="Вставьте ваши ссылки через запятую"
+                rows="2"></textarea>
+            </div>
+            <div class="form-group contact-block mini-block">
+              <h6>Введите контакты для видеоролика</h6>
+              <textarea name="main-contact" class="form-control" id="textarea2" placeholder="Контакты"
+                rows="2"></textarea>
+              <div class="form-check form-check-inline">
+                <input  class="form-check-input" type="radio" name="contact-where" id="contactRadio2"
+                  value="start">
+                <label class="form-check-label" for="contactRadio2">в начале</label>
+              </div>
+
+              <div class="form-check form-check-inline">
+                <input checked class="form-check-input" type="radio" name="contact-where" id="contactRadio1"
+                  value="finish">
+                <label class="form-check-label" for="contactRadio1">в конце</label>
+              </div>
+              
+              <div class="form-check form-check-inline">
+                <input  class="form-check-input" type="radio" name="contact-where" id="contactRadio3"
+                  value="all-video">
+                <label class="form-check-label" for="contactRadio3">на протяжении всего ролика</label>
+              </div>
+            </div>
+            <div class="form-group links-block mini-block">
+              <h6>Ссылки на ваш сайт и социальные сети</h6>
+              <textarea name="main-social-links" class="form-control" id="textarea3" placeholder="Вставьте ваши ссылки через запятую"
+                rows="2"></textarea>
+            </div>
+            <div class="form-group main-comment mini-block">
+              <h6>Дополнительный комментарий (необязательное поле)</h6>
+              <textarea name="main-comment" class="form-control" placeholder="Добавить комментарий"
+                id="textarea4" rows="3"></textarea>
+            </div>
+            <div class="form-group contact-order mini-block">
+              <h6>Контактная информация для заказа</h6>
+              <input class="text-field form-control" required type="text" name="contact-name" placeholder="Имя">
+              <input class="text-field form-control" required type="email" name="contact-email" placeholder="Email">
+              <input class="text-field form-control" required type="phone" name="contact-phone" placeholder="Телефон">
+            </div>
+            <div class="main-btn block">  <!--<button type="submit" class="btn btn-primary">Отправить</button>-->
+              <button type="submit" class="button-anim ">
+                <span class="submit">Отправить</span>
+                <span class="loading"><i class="fa fa-refresh"></i></span>
+                <span class="check"><i class="fa fa-check"></i></span>
+                <span class="fail"><i class="fas fa-times"></i></span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--  <div class="col-md-4">
+    </div> -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Спасибо за заполнение формы!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Не отправлено, попробуйте еще раз.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="dist/my-polyfills.js" ></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=fetch"></script>
+  <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-3.3.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <script src="dist/script.js"></script>
+</body>
+
+</html>
