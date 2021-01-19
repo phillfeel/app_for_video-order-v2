@@ -369,26 +369,6 @@ document.addEventListener('DOMContentLoaded', function () {
         gifName;
 
     function getCarouselHtml(gifName, nameAnim_1, nameAnim_2, nameAnim_3, nameAnim_4) {
-        let carousel = `<h6 class="duration-title">Настроить анимацию</h6>
-        <div class="chooseAnimation-zone">
-          <div class="${nameForInitSlider}">
-            <div class="sl_slice"><img src="img/${gifName}-1.gif" alt="" class="sl_img">
-            <p class="sl_text">${nameAnim_1}</p>
-            </div>
-            <div class="sl_slice"><img src="img/${gifName}-2.gif" alt="" class="sl_img">
-              <p class="sl_text">${nameAnim_2}</p></div>
-            <div class="sl_slice"><img src="img/${gifName}-3.gif" alt="" class="sl_img">
-              <p class="sl_text">${nameAnim_3}</p>
-            </div>
-            <div class="sl_slice"><img src="img/${gifName}-4.gif" alt="" class="sl_img">
-              <p class="sl_text">${nameAnim_4}</p>
-            </div> 
-          </div>
-        </div>`;
-      return carousel;
-    };
-
-    function getCarouselHtml(gifName, nameAnim_1, nameAnim_2, nameAnim_3, nameAnim_4) {
       let carousel = `<h6 class="duration-title">Настроить анимацию</h6>
       <div class="chooseAnimation-zone">
         <div class="${nameForInitSlider}">
