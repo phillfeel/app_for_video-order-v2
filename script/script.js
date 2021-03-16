@@ -269,7 +269,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Video
+  // add video in slide
   function initSlideVideo (slide){
     var allVideos = slide.querySelectorAll(`.slick-slider .slick-list .sl_slice video`);
     allVideos.forEach(video => video.pause() );
